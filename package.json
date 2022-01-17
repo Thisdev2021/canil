@@ -2,14 +2,16 @@
   "name": "nodetscanil",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/d8web/nodeTsCanil",
+  "repository": "https://github.com/Thisdev2021/canil",
   "engines": {
     "node": "16.x"
   },
   "scripts": {
+    "start": "node dist/server.js",
+    "postinstall": "tsc && copyfiles -u 1 src/**/*.mustache dist/",
     "start-dev": "nodemon -e ts,json,mustache src/server.ts"
   },
-  "author": "Daniel Ferreira <df46636@gmail.com'>",
+  "author": "Daniel Ferreira <thisdev2021@gmail.com'>",
   "license": "MIT",
   "dependencies": {
     "dotenv": "^10.0.0",
@@ -21,6 +23,7 @@
   "devDependencies": {
     "@types/express": "^4.17.13",
     "@types/mustache-express": "^1.2.1",
-    "@types/node": "^16.7.1"
+    "@types/node": "^16.7.1",
+    "copyfiles": "^2.4.1"
   }
 }
